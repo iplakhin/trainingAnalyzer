@@ -1,0 +1,52 @@
+
+
+207f5679-0b67-46d1-9261-31107ea3d7d5
+
+
+
+
+
+
+
+
+
+Авторизация
+
+URL:
+"https://auth.polar.com/login?response_type=code&scope=POLAR_SSO&client_id=flow&redirect_uri=https://flow.polar.com/flowSso/redirect&state=...
+(UUID)state=fcbfe29f-9f59-4c89-b110-0c1548eab445
+
+
+
+Список тренировок за период
+
+POST https://flow.polar.com/api/training/history
+-> request payload: {"userId":41141880,"fromDate":"2025-02-19","toDate":"2025-05-19"}
+
+<- response:
+    [
+        {
+            "id": 8115116121,
+            "duration": 10696127,
+            "distance": 52506.30078125,
+            "hrAvg": 143,
+            "calories": 1957,
+            "note": " ",
+            "sportName": "Езда на велосипеде",
+            "sportId": 2,
+            "startDate": "2025-05-18 17:24:42.706",
+            "recoveryTime": 285940008,
+            "iconUrl": "https://platform.cdn.polar.com/ecosystem/sport/icon/561a80f6d7eef7cc328aa07fe992af8e-2024-04-16_06_01_32",
+            "trainingLoadHtml": "",
+            "hasTrainingTarget": false,
+            "swimmingSport": false,
+            "swimmingPoolUnits": "METERS",
+            "trainingLoadProHtml": "11111",
+            "periodDataUuid": null,
+            "isTest": false
+        },...
+    ]
+
+Скачать треньку в tcx:
+https://flow.polar.com/api/export/training/tcx/8115116121?compess=true
+
